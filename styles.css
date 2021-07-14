@@ -1,0 +1,74 @@
+header{
+    background-color: #F63232;
+    padding: 5px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+header h1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    padding: 6px 12px;
+    border: solid white;
+    border-radius: 30px;
+
+}
+
+.banner{
+    position: relative;
+}
+
+.banner img{
+    max-width: 100%;
+    top: 20px;
+
+}
+
+.banner .welcome{
+    position: absolute;
+    left: 0px;
+    top: 40%;   
+    background-color: rgb(255, 213, 77);
+    color: white;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.banner .welcome h2{
+    font-size: 50px;
+}
+
+.banner .welcome span{
+    font-size: 1.3em;
+}
+
+
+nav{
+    position: sticky;
+    top: 100px;
+    background-color: gainsboro;
+    padding: 20px;
+
+}
+
+nav ul{
+    white-space: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav li{
+    width: 25%;
+    font-size: 20px;
+    display: inline-block;
+}
+
+
+.main-nav li{
+    display: inline-block;
+    padding: 20px;
+}
