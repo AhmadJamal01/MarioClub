@@ -120,6 +120,12 @@ article p{
 
 .images li img{
     max-width: 100%;
+
+    /* for hover animation */
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }
 
 .join{
@@ -148,4 +154,28 @@ footer{
     color: white;
     padding: 10px;
     text-align: center;
+}
+
+
+/* pseudo classes and elements */
+.images li :hover{
+    -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+.main-nav li:hover{
+    text-decoration:underline;
+}
+
+form input:focus{
+    border: 4px dashed #4b4b4b;
+}
+
+form input:valid{
+    border: 4px solid greenyellow;
+}
+
+p::selection,h1::selection,h2::selection{
+    background-color: #F63232;
+    color: white;
 }
