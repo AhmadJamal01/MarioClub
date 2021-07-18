@@ -1,0 +1,109 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.sky{
+    position: relative;
+    background: rgb(116, 166, 241);
+    top: 0;
+    height: 40%;
+}
+
+.grass{
+    position: relative;
+    height: 30%;
+    background-color: seagreen;
+}
+
+.road{
+    position: relative;
+    height: 30%;
+    background-color: dimgrey;
+    border-top: 5px  solid grey;
+}
+
+.lines{
+    /* margin: 10px;
+    padding: 10px; */
+
+    width: 100%;
+    border: none;
+    position: absolute;
+    border-top: 10px dashed white;
+    bottom: 50%;   
+}
+
+.cloud{
+    position: absolute;
+}
+
+/* elements to animate */
+
+.mario{
+    position:absolute;
+    top: -50px;
+    animation-name: drive;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation: drive 3s linear infinite forwards,
+               mario-jump 0.5s 1.5s ease;
+    
+}
+
+.luigi{
+    position:absolute;
+    top: 80px;
+    z-index: 1;
+    animation-name: drive;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    /* animation-direction: reverse; */
+    animation-timing-function: linear;
+}
+
+
+.cloud:nth-child(1){
+    width: 200px;
+    top: 120px;
+    opacity: 0.5;
+    animation: wind 100s linear 3s infinite reverse;
+    
+}
+
+.cloud:nth-child(2){
+    width: 300px;
+    top: 0;
+    animation: wind 80s linear 0s infinite reverse;
+
+
+    
+}
+
+/* keyframes */
+
+@keyframes drive {
+    from{
+        transform: translateX(-100px);
+    }
+    to{
+        transform: translateX(1500px);
+    }
+}
+
+@keyframes wind {
+    /* from{transform: translateX(-300px);}
+    to{transform: translateX(100%);} */
+    from{left: -300px}
+    to{left: 100%;}
+}
+
+@keyframes mario-jump {
+    0%{top: -50px;}
+    50%{top: -100px;}
+    100%{top: -50px;}
+}
